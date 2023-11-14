@@ -26,20 +26,160 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        lblCim = new javax.swing.JLabel();
+        lblKep = new javax.swing.JLabel();
+        lblKep2 = new javax.swing.JLabel();
+        pnlKiallitas = new javax.swing.JPanel();
+        rbtSeuso = new javax.swing.JRadioButton();
+        rbtMo = new javax.swing.JRadioButton();
+        rbtKotar = new javax.swing.JRadioButton();
+        pnlKedvezmenyek = new javax.swing.JPanel();
+        txtfOsszegzes = new javax.swing.JTextField();
+        lblOsszegzes = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Múzeum Jegyvásárlás");
+
+        jPanel1.setBackground(new java.awt.Color(239, 224, 203));
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        lblCim.setFont(new java.awt.Font("Vivaldi", 0, 44)); // NOI18N
+        lblCim.setText("Nemzeti Múzeum");
+
+        lblKep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/oszlop.png"))); // NOI18N
+
+        lblKep2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/oszlop.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(lblKep)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblCim)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblKep2)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblKep, lblKep2});
+
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblKep, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(22, 22, 22)
+                            .addComponent(lblCim))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(lblKep2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18))
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblKep, lblKep2});
+
+        pnlKiallitas.setBorder(javax.swing.BorderFactory.createTitledBorder("Kiállítás"));
+
+        buttonGroup1.add(rbtSeuso);
+        rbtSeuso.setText("A Seuso-kincs");
+
+        buttonGroup1.add(rbtMo);
+        rbtMo.setText("Magyarország története");
+
+        buttonGroup1.add(rbtKotar);
+        rbtKotar.setText("Középkori kőtár");
+
+        javax.swing.GroupLayout pnlKiallitasLayout = new javax.swing.GroupLayout(pnlKiallitas);
+        pnlKiallitas.setLayout(pnlKiallitasLayout);
+        pnlKiallitasLayout.setHorizontalGroup(
+            pnlKiallitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlKiallitasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlKiallitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbtMo, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .addGroup(pnlKiallitasLayout.createSequentialGroup()
+                        .addGroup(pnlKiallitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbtSeuso, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbtKotar, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        pnlKiallitasLayout.setVerticalGroup(
+            pnlKiallitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlKiallitasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rbtSeuso)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtMo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtKotar)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        pnlKedvezmenyek.setBorder(javax.swing.BorderFactory.createTitledBorder("Kedvezmények"));
+
+        javax.swing.GroupLayout pnlKedvezmenyekLayout = new javax.swing.GroupLayout(pnlKedvezmenyek);
+        pnlKedvezmenyek.setLayout(pnlKedvezmenyekLayout);
+        pnlKedvezmenyekLayout.setHorizontalGroup(
+            pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 170, Short.MAX_VALUE)
+        );
+        pnlKedvezmenyekLayout.setVerticalGroup(
+            pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 64, Short.MAX_VALUE)
+        );
+
+        lblOsszegzes.setText("Összegzés:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 316, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlKiallitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblOsszegzes)
+                            .addComponent(pnlKedvezmenyek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 53, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(txtfOsszegzes, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 226, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pnlKiallitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pnlKedvezmenyek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(lblOsszegzes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(txtfOsszegzes, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -78,5 +218,17 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblCim;
+    private javax.swing.JLabel lblKep;
+    private javax.swing.JLabel lblKep2;
+    private javax.swing.JLabel lblOsszegzes;
+    private javax.swing.JPanel pnlKedvezmenyek;
+    private javax.swing.JPanel pnlKiallitas;
+    private javax.swing.JRadioButton rbtKotar;
+    private javax.swing.JRadioButton rbtMo;
+    private javax.swing.JRadioButton rbtSeuso;
+    private javax.swing.JTextField txtfOsszegzes;
     // End of variables declaration//GEN-END:variables
 }
