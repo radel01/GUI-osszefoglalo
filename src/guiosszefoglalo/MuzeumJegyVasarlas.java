@@ -15,10 +15,6 @@ import javax.swing.text.StyledEditorKit;
  */
 public class MuzeumJegyVasarlas extends javax.swing.JFrame {
 
-    int dbOssz=0;
-    int dbFelnott=0;
-    int dbDiak=0;
-    int dbCsoportos=0;
     int vegsoAr=0;
     int jegyAr=0;
     int tarlatAr=0;
@@ -150,21 +146,11 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 chkDiakItemStateChanged(evt);
             }
         });
-        chkDiak.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkDiakActionPerformed(evt);
-            }
-        });
 
         chkCsoport.setText("Csoportos (15 fő felett)");
         chkCsoport.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 chkCsoportItemStateChanged(evt);
-            }
-        });
-        chkCsoport.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkCsoportActionPerformed(evt);
             }
         });
 
@@ -275,11 +261,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 rbtPalotaItemStateChanged(evt);
             }
         });
-        rbtPalota.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtPalotaActionPerformed(evt);
-            }
-        });
 
         buttonGroup1.add(rbtMuzeumkert);
         rbtMuzeumkert.setText("A múzeumkert");
@@ -295,11 +276,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         cmbDatum.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cmbDatumItemStateChanged(evt);
-            }
-        });
-        cmbDatum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbDatumActionPerformed(evt);
             }
         });
 
@@ -352,6 +328,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnMegrendeles.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMegrendeles.setText("Megrendelés");
         btnMegrendeles.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -493,6 +470,9 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        pnlFejlec1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {pnlKedvezmenyek, pnlKiallitas});
+
         pnlFejlec1Layout.setVerticalGroup(
             pnlFejlec1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFejlec1Layout.createSequentialGroup()
@@ -528,22 +508,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void chkCsoportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkCsoportActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chkCsoportActionPerformed
-
-    private void cmbDatumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDatumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbDatumActionPerformed
-
-    private void rbtPalotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPalotaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbtPalotaActionPerformed
-
-    private void chkDiakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkDiakActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chkDiakActionPerformed
 
     private void btnMegseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMegseMouseEntered
         btnMegse.setText("MÉGSE");
@@ -673,11 +637,8 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMegrendelesActionPerformed
 
     private void cmbDatumItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbDatumItemStateChanged
-
-        String datumIndex=cmbDatum.getModel().getSelectedItem().toString();
-        
-        datum=datumIndex;
-        
+        String datumIndex=cmbDatum.getModel().getSelectedItem().toString();        
+        datum=datumIndex;        
         osszegzesKiirasa();
     }//GEN-LAST:event_cmbDatumItemStateChanged
 
@@ -714,6 +675,22 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         tarlat=System.lineSeparator()+"Tárlatvezetéssel ("+tarlatIdo+")";
         osszegzesKiirasa();
     }//GEN-LAST:event_cmbTurnusItemStateChanged
+    private void tarlatEnabled() {
+        if (rbtKelet.isSelected() || rbtKotar.isSelected() || rbtMo.isSelected() || rbtMuzeumkert.isSelected() || rbtPalota.isSelected()|| rbtSeuso.isSelected()){
+            chkTarlat.setEnabled(true);
+        }
+    }
+    private void osszegzesKiirasa(){
+        String jegyek="Jegyek: "+jegyFelnott+darabFelnott+ jegyDiak+darabDiak+jegyCsoportos+darabCsoportos;
+        osszegzes = "Kiállítás: "+kiallitas+System.lineSeparator()+"Dátum: "+datum+System.lineSeparator()+ jegyek + tarlat;
+        txaOsszegzes.setText(osszegzes);
+    }
+    private void vegosszegKiirasa(){
+        jegyAr=jegyArDiak+jegyArFelnott+jegyArCsoportos;
+        vegsoAr = jegyAr + tarlatAr;
+        System.out.println(vegsoAr);
+        txtfVegosszeg.setText(vegsoAr+" Ft");
+    }
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -783,21 +760,5 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     private javax.swing.JTextArea txaOsszegzes;
     private javax.swing.JTextField txtfVegosszeg;
     // End of variables declaration//GEN-END:variables
-private void tarlatEnabled() {
-        if (rbtKelet.isSelected() || rbtKotar.isSelected() || rbtMo.isSelected() || rbtMuzeumkert.isSelected() || rbtPalota.isSelected()|| rbtSeuso.isSelected()){
-            chkTarlat.setEnabled(true);
-        }
-    }
-private void osszegzesKiirasa(){
-        String jegyek="Jegyek: "+jegyFelnott+darabFelnott+ jegyDiak+darabDiak+jegyCsoportos+darabCsoportos;
-        osszegzes = "Kiállítás: "+kiallitas+System.lineSeparator()+"Dátum: "+datum+System.lineSeparator()+ jegyek + tarlat;
-        txaOsszegzes.setText(osszegzes);
-    }
-private void vegosszegKiirasa(){
-        jegyAr=jegyArDiak+jegyArFelnott+jegyArCsoportos;
-        vegsoAr = jegyAr + tarlatAr;
-        System.out.println(vegsoAr);
-        txtfVegosszeg.setText(vegsoAr+" Ft");
-}
 
 }
