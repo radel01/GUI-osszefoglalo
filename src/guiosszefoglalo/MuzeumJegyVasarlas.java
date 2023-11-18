@@ -7,6 +7,7 @@ package guiosszefoglalo;
 import java.awt.Checkbox;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 import javax.swing.text.StyledEditorKit;
 
 /**
@@ -68,7 +69,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         btnMegse = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaOsszegzes = new javax.swing.JTextArea();
-        lblOsszegzes = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtfVegosszeg = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
@@ -96,13 +96,13 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         pnlFejlecLayout.setHorizontalGroup(
             pnlFejlecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFejlecLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(15, 15, 15)
                 .addComponent(lblKep)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblCim)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblKep2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
         pnlFejlecLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblKep, lblKep2});
@@ -132,11 +132,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         chkFelnott.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 chkFelnottItemStateChanged(evt);
-            }
-        });
-        chkFelnott.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                chkFelnottStateChanged(evt);
             }
         });
 
@@ -183,20 +178,16 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         pnlKedvezmenyekLayout.setHorizontalGroup(
             pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlKedvezmenyekLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlKedvezmenyekLayout.createSequentialGroup()
-                        .addComponent(chkDiak)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(spnDiak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlKedvezmenyekLayout.createSequentialGroup()
-                        .addComponent(chkCsoport)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(spnCsoport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlKedvezmenyekLayout.createSequentialGroup()
-                        .addComponent(chkFelnott, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(spnFelnott, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkFelnott, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chkDiak)
+                    .addComponent(chkCsoport))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(spnDiak, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnCsoport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnFelnott, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3))
         );
 
@@ -217,7 +208,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addGroup(pnlKedvezmenyekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chkCsoport)
                     .addComponent(spnCsoport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pnlKiallitas.setBorder(javax.swing.BorderFactory.createTitledBorder("Kiállítás"));
@@ -226,7 +217,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         rbtSeuso.setText("A Seuso-kincs");
         rbtSeuso.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rbtSeusoItemStateChanged(evt);
+                kiallitasKiirasa(evt);
             }
         });
 
@@ -234,7 +225,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         rbtMo.setText("Magyarország története");
         rbtMo.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rbtMoItemStateChanged(evt);
+                kiallitasKiirasa(evt);
             }
         });
 
@@ -242,7 +233,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         rbtKotar.setText("Középkori kőtár");
         rbtKotar.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rbtKotarItemStateChanged(evt);
+                kiallitasKiirasa(evt);
             }
         });
 
@@ -250,7 +241,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         rbtKelet.setText("Kelet és Nyugat határán");
         rbtKelet.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rbtKeletItemStateChanged(evt);
+                kiallitasKiirasa(evt);
             }
         });
 
@@ -258,7 +249,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         rbtPalota.setText("Virtuális palota");
         rbtPalota.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rbtPalotaItemStateChanged(evt);
+                kiallitasKiirasa(evt);
             }
         });
 
@@ -266,7 +257,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         rbtMuzeumkert.setText("A múzeumkert");
         rbtMuzeumkert.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                rbtMuzeumkertItemStateChanged(evt);
+                kiallitasKiirasa(evt);
             }
         });
 
@@ -293,9 +284,9 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                             .addGroup(pnlKiallitasLayout.createSequentialGroup()
                                 .addGap(37, 37, 37)
                                 .addComponent(lblLink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 42, Short.MAX_VALUE))
+                                .addGap(42, 42, 42))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlKiallitasLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 0, 0)
                                 .addComponent(cmbDatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())
                     .addGroup(pnlKiallitasLayout.createSequentialGroup()
@@ -305,7 +296,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                                 .addComponent(rbtMuzeumkert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(rbtSeuso, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rbtKotar, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 0, 0))))
         );
         pnlKiallitasLayout.setVerticalGroup(
             pnlKiallitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,8 +316,10 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addComponent(lblLink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addComponent(cmbDatum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
+
+        lblVegosszeg.setBorder(javax.swing.BorderFactory.createTitledBorder("Összegzés"));
 
         btnMegrendeles.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMegrendeles.setText("Megrendelés");
@@ -363,8 +356,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         txaOsszegzes.setRows(5);
         jScrollPane1.setViewportView(txaOsszegzes);
 
-        lblOsszegzes.setText("Összegzés:");
-
         jLabel1.setText("Végösszeg:");
 
         txtfVegosszeg.setEditable(false);
@@ -381,22 +372,19 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtfVegosszeg, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(lblVegosszegLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lblOsszegzes)
                         .addGroup(lblVegosszegLayout.createSequentialGroup()
                             .addComponent(btnMegrendeles, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(btnMegse, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
         lblVegosszegLayout.setVerticalGroup(
             lblVegosszegLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lblVegosszegLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(lblOsszegzes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(10, 10, 10)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addGroup(lblVegosszegLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtfVegosszeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -406,6 +394,8 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                     .addComponent(btnMegse))
                 .addContainerGap())
         );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         chkTarlat.setText("Tárlatvezetéssel");
         chkTarlat.setEnabled(false);
@@ -435,11 +425,11 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addComponent(chkTarlat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
+                .addGap(124, 124, 124)
                 .addComponent(lblTurnus)
                 .addGap(18, 18, 18)
                 .addComponent(cmbTurnus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -462,16 +452,18 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addGroup(pnlFejlec1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlFejlec1Layout.createSequentialGroup()
                         .addComponent(pnlKedvezmenyek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(lblVegosszeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlFejlec1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFejlec1Layout.createSequentialGroup()
                         .addComponent(pnlKiallitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pnlFejlec1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {pnlKedvezmenyek, pnlKiallitas});
+
+        pnlFejlec1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPanel2, lblVegosszeg});
 
         pnlFejlec1Layout.setVerticalGroup(
             pnlFejlec1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -479,14 +471,15 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlFejlec1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnlFejlec1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblVegosszeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblVegosszeg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnlFejlec1Layout.createSequentialGroup()
                         .addComponent(pnlKiallitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(pnlKedvezmenyek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10))
+                .addGap(5, 5, 5))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -502,7 +495,7 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
                 .addComponent(pnlFejlec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlFejlec1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         pack();
@@ -528,42 +521,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     private void btnMegrendelesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMegrendelesMouseExited
         btnMegrendeles.setText("Megrendelés");
     }//GEN-LAST:event_btnMegrendelesMouseExited
-
-    private void rbtSeusoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtSeusoItemStateChanged
-        tarlatEnabled();
-        kiallitas="A Seuso-kincs";
-        osszegzesKiirasa();
-    }//GEN-LAST:event_rbtSeusoItemStateChanged
-
-    private void rbtMoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtMoItemStateChanged
-        tarlatEnabled();
-        kiallitas="Magyarország története";
-        osszegzesKiirasa();
-    }//GEN-LAST:event_rbtMoItemStateChanged
-
-    private void rbtKotarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtKotarItemStateChanged
-        tarlatEnabled();
-        kiallitas="Középkori kőtár";
-        osszegzesKiirasa();
-    }//GEN-LAST:event_rbtKotarItemStateChanged
-
-    private void rbtKeletItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtKeletItemStateChanged
-        tarlatEnabled();
-        kiallitas="Kelet és nyugat határán";
-        osszegzesKiirasa();
-    }//GEN-LAST:event_rbtKeletItemStateChanged
-
-    private void rbtPalotaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtPalotaItemStateChanged
-        tarlatEnabled();
-        kiallitas="Virtuális palota";
-        osszegzesKiirasa();
-    }//GEN-LAST:event_rbtPalotaItemStateChanged
-
-    private void rbtMuzeumkertItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtMuzeumkertItemStateChanged
-        tarlatEnabled();
-        kiallitas="A múzeumkert";
-        osszegzesKiirasa();
-    }//GEN-LAST:event_rbtMuzeumkertItemStateChanged
 
     private void chkFelnottItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_chkFelnottItemStateChanged
         if (chkFelnott.isSelected()){
@@ -650,10 +607,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         vegosszegKiirasa();
     }//GEN-LAST:event_spnFelnottStateChanged
 
-    private void chkFelnottStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkFelnottStateChanged
-
-    }//GEN-LAST:event_chkFelnottStateChanged
-
     private void spnDiakStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spnDiakStateChanged
         int dbSzam= spnDiak.getModel().getValue().hashCode();
         darabDiak=dbSzam+" db";
@@ -675,6 +628,13 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
         tarlat=System.lineSeparator()+"Tárlatvezetéssel ("+tarlatIdo+")";
         osszegzesKiirasa();
     }//GEN-LAST:event_cmbTurnusItemStateChanged
+
+    private void kiallitasKiirasa(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_kiallitasKiirasa
+        JRadioButton rbt = (JRadioButton) evt.getSource();
+        kiallitas=rbt.getText();
+        tarlatEnabled();
+        osszegzesKiirasa();
+    }//GEN-LAST:event_kiallitasKiirasa
     private void tarlatEnabled() {
         if (rbtKelet.isSelected() || rbtKotar.isSelected() || rbtMo.isSelected() || rbtMuzeumkert.isSelected() || rbtPalota.isSelected()|| rbtSeuso.isSelected()){
             chkTarlat.setEnabled(true);
@@ -688,7 +648,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     private void vegosszegKiirasa(){
         jegyAr=jegyArDiak+jegyArFelnott+jegyArCsoportos;
         vegsoAr = jegyAr + tarlatAr;
-        System.out.println(vegsoAr);
         txtfVegosszeg.setText(vegsoAr+" Ft");
     }
 
@@ -741,7 +700,6 @@ public class MuzeumJegyVasarlas extends javax.swing.JFrame {
     private javax.swing.JLabel lblKep;
     private javax.swing.JLabel lblKep2;
     private javax.swing.JLabel lblLink;
-    private javax.swing.JLabel lblOsszegzes;
     private javax.swing.JLabel lblTurnus;
     private javax.swing.JPanel lblVegosszeg;
     private javax.swing.JPanel pnlFejlec;
